@@ -28,3 +28,4 @@ C:\Users\Lerato.Setona\Downloads\myWebApp\obj\Debug\net8.0\refint\myWebApp.dll
 C:\Users\Lerato.Setona\Downloads\myWebApp\obj\Debug\net8.0\myWebApp.pdb
 C:\Users\Lerato.Setona\Downloads\myWebApp\obj\Debug\net8.0\myWebApp.genruntimeconfig.cache
 C:\Users\Lerato.Setona\Downloads\myWebApp\obj\Debug\net8.0\ref\myWebApp.dll
+C:\Users\Lerato.Setona\Downloads\myWebApp\obj\Debug\net8.0\myWebApp.sourcelink.json

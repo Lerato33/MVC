@@ -1,0 +1,26 @@
+trigger:
+  branches:
+    include:
+      - main  # or whichever branch you want to trigger on
+
+pool:
+  name: azure-onprem-pool  # the name of your self-hosted agent pool
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.0.x' # change this if you use a different version
+    installationPath: $(Agent.ToolsDirectory)/dotnet
+
+- script: dotnet restore MyMvcApp.sln
+  displayName: 'Restore NuGet packages'
+
+- script: dotnet build MyMvcApp.sln --configuration $(buildConfiguration) --no-restore
+  displayName: 'Build solution'
+
+- script: dotnet test MyMvcApp.sln --configuration $(buildConfiguration) --no-build --verbosity normal
+  displayName: 'Run tests'
